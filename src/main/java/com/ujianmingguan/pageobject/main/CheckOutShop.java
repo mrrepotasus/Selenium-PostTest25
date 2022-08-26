@@ -48,12 +48,14 @@ public class CheckOutShop {
 	private WebElement btnCountry;
 	@FindBy(xpath = "//span[@id='select2-billing_state-container']")
 	private WebElement btnState;
+	@FindBy(xpath = "//input[@id='billing_email']")
+	private WebElement inputemail;
 
 	public void InputData() {
-		System.out.println("mulai");
 		FirstNameTxt.sendKeys("Ramma");
 		LastNameTxt.sendKeys("putra");
 		CompanyTxt.sendKeys("juara coding");
+		inputemail.sendKeys("rammatest@gmail.com");
 		btnCountry.click();
 		CountrySelect.sendKeys("Indonesia",Keys.ENTER);
 		StreetTxt.sendKeys("jln.kalimantan 1");
@@ -66,6 +68,9 @@ public class CheckOutShop {
 		delay(2);
 		CheckBox.click();
 		delay(2);
+		
+	}
+	public void placeorder() {
 		btnPlaceOrder.click();
 	}
 	

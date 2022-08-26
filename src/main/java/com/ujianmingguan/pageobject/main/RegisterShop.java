@@ -51,6 +51,10 @@ public class RegisterShop {
 		btnLogin.click();
 	}
 	
+	public void DismissAlert() {
+		btnAlert.click();
+	}
+	
 	static void delay(int detik) {
 		try {
 			Thread.sleep(1000*detik);

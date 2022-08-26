@@ -40,6 +40,7 @@ private WebDriver driver;
 	@FindBy(xpath = "//a[@class='checkout-button button alt wc-forward']")
 	private WebElement BtnCheckOut;
 	
+	
 	public void SearchItem(String Dicari) {
 		btnSearch.click();
 		InputSearch.sendKeys(Dicari);
@@ -50,9 +51,10 @@ private WebDriver driver;
 		Select warna = new Select(Inputcolor);
 		Select ukuran = new Select(Inputsize);
 		warna.selectByIndex(color);
-		ukuran.selectByIndex(size);
+		ukuran.selectByIndex(size);	
 		btnAddCart.click();
 	}
+	
 	public void compare() {
 		btnCompare.click();
 		delay(3);
@@ -60,10 +62,11 @@ private WebDriver driver;
 	}	
 	public void ViewCart() {
 		btnCart.click();
-		delay(5);
+		delay(5);	
+	}
+	public void checkout() {
 		BtnCheckOut.click();
 	}
-	
 	static void delay(int detik) {
 		try {
 			Thread.sleep(1000 * detik);

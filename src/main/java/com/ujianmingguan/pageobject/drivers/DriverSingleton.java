@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import com.ujianmingguan.pageobject.driver.strategy.DriverStrategy;
 import com.ujianmingguan.pageobject.driver.strategy.DriverStrategyImplementer;
+import com.ujianmingguan.pageobject.utils.Constans;
 
 public class DriverSingleton {
 
@@ -17,7 +18,7 @@ public class DriverSingleton {
 	public WebDriver instantiate(String strategy) {
 		DriverStrategy driverStrategy =DriverStrategyImplementer.choosesStrategy(strategy);
 		driver = driverStrategy.setStrategy();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Constans.TIMEOUT,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
 		return driver;

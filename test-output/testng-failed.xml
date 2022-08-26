@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ujianmingguan.main.TestUjianMingguKe4">
+      <class name="com.ujianmingguan.main.TestRunnerMingguKe5">
         <methods>
-          <include name="TestIdentitasUserDanCheckOut"/>
-          <include name="closeBrowser"/>
-          <include name="pageObject"/>
-          <include name="setup"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.ujianmingguan.main.TestUjianMingguKe4 -->
+      </class> <!-- com.ujianmingguan.main.TestRunnerMingguKe5 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
