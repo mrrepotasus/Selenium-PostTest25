@@ -52,15 +52,15 @@ public class CheckOutShop {
 	private WebElement inputemail;
 
 	public void InputData() {
+		btnCountry.click();
+		CountrySelect.sendKeys("Indonesia",Keys.ENTER);
+		btnState.click();
+		StateSelect.sendKeys("Bali",Keys.ENTER);
 		FirstNameTxt.sendKeys("Ramma");
 		LastNameTxt.sendKeys("putra");
 		CompanyTxt.sendKeys("juara coding");
 		inputemail.sendKeys("rammatest@gmail.com");
-		btnCountry.click();
-		CountrySelect.sendKeys("Indonesia",Keys.ENTER);
 		StreetTxt.sendKeys("jln.kalimantan 1");
-		btnState.click();
-		StateSelect.sendKeys("Bali",Keys.ENTER);
 		TownTxt.sendKeys("jaktim");
 		PinTxt.sendKeys("80111");
 		PhoneTxt.sendKeys("081081081081");

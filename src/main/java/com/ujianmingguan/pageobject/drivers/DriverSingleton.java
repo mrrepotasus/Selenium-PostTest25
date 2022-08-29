@@ -36,4 +36,7 @@ public class DriverSingleton {
 		
 		return driver;
 	}
+	public static void CloseObjectInstance() {
+		driver.close();
+	}
 }
